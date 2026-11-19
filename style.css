@@ -1,0 +1,106 @@
+/* ==============================
+   GENERAL SETTINGS
+============================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background-color: #000; color: #fff; font-family: Arial, Helvetica, sans-serif; }
+a { text-decoration: none; }
+
+.navbar { min-height: 80px; z-index: 10; }
+.brand { color: #e50914; font-size: 30px; font-weight: 900; letter-spacing: -1px; }
+.brand:hover { color: #e50914; }
+.btn-danger { background-color: #e50914; border-color: #e50914; font-weight: bold; }
+.btn-danger:hover { background-color: #b20710; border-color: #b20710; }
+
+/* Hero: local image path is relative to index.html / style.css */
+.hero-section {
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+    background-image:
+        linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.72)),
+        url("./image/elLovers.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero-content { position: relative; z-index: 1; max-width: 950px; padding: 120px 15px 70px; }
+.hero-content h1 { font-size: clamp(35px, 5vw, 60px); font-weight: 900; line-height: 1.15; margin-bottom: 20px; }
+.hero-content h2 { font-size: 24px; margin-bottom: 25px; }
+.hero-content p { font-size: 18px; margin-bottom: 20px; }
+
+/* Email forms */
+.email-form { display: flex; gap: 10px; max-width: 650px; }
+.email-form .form-control { min-height: 58px; background: rgba(30,30,30,.85); color: #fff; border: 1px solid #888; font-size: 16px; }
+.email-form .form-control::placeholder { color: #ccc; }
+.email-form .form-control:focus { background: rgba(30,30,30,.95); color: #fff; border-color: #fff; box-shadow: none; }
+.email-form .btn { min-width: 170px; font-size: 20px; white-space: nowrap; }
+
+/* Feature sections */
+.feature { border-top: 8px solid #222; padding: 65px 30px; min-height: 390px; }
+.feature-copy { padding: 30px; }
+.feature-copy h2 { font-size: clamp(30px, 4vw, 48px); font-weight: 900; margin-bottom: 20px; }
+.feature-copy p { font-size: 21px; line-height: 1.5; }
+.feature-image { max-width: 100%; max-height: 340px; object-fit: contain; }
+.kids-image { max-height: 300px; }
+
+/* FAQ */
+.faq-section { padding-top: 65px; padding-bottom: 65px; max-width: 950px; }
+.faq-section h2 { font-size: clamp(30px, 4vw, 45px); font-weight: 900; }
+.accordion-item { background: #2d2d2d; color: #fff; margin-bottom: 8px; border: none; }
+.accordion-button { background: #2d2d2d; color: #fff; font-size: 21px; padding: 22px; }
+.accordion-button:not(.collapsed) { background: #2d2d2d; color: #fff; box-shadow: none; }
+.accordion-button::after { filter: invert(1); }
+.accordion-button:focus { box-shadow: none; }
+.accordion-body { background: #2d2d2d; color: #fff; font-size: 18px; line-height: 1.6; border-top: 1px solid #000; }
+.bottom-cta { border-bottom: 8px solid #222; padding: 35px 15px 60px; }
+.bottom-cta p { font-size: 18px; margin-bottom: 20px; }
+.footer { padding-top: 40px; padding-bottom: 40px; color: #aaa; }
+.footer small { display: block; margin-top: 20px; }
+
+/* Login and registration */
+.auth-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.86), rgba(0,0,0,.92)),
+        url("./image/elLovers.png") center / cover fixed;
+}
+.auth-container { min-height: calc(100vh - 140px); display: flex; justify-content: center; align-items: center; padding: 35px 15px; }
+.auth-box { width: 100%; max-width: 450px; background: rgba(0,0,0,.88); padding: 40px; border-radius: 8px; }
+.auth-box h1 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
+.auth-subtitle { color: #bbb; margin-bottom: 25px; }
+.auth-box .form-label { color: #fff; font-weight: 600; }
+.auth-box .form-control { min-height: 50px; background: #333; color: #fff; border: 1px solid #555; }
+.auth-box .form-control::placeholder { color: #aaa; }
+.auth-box .form-control:focus { background: #333; color: #fff; border-color: #fff; box-shadow: none; }
+.auth-box .form-check-label { color: #bbb; font-size: 14px; }
+.auth-box .form-check-input { background-color: #333; border-color: #777; }
+.auth-box .form-check-input:checked { background-color: #e50914; border-color: #e50914; }
+.auth-box .btn { min-height: 48px; font-size: 17px; margin-top: 10px; }
+.auth-footer { color: #aaa; margin-top: 25px; }
+.auth-footer a { color: #fff; font-weight: bold; }
+.auth-footer a:hover { text-decoration: underline; }
+.auth-bottom { color: #aaa; padding: 20px; border-top: 1px solid #333; }
+#registerMessage, #loginMessage { font-size: 14px; }
+
+@media (max-width: 768px) {
+    .brand { font-size: 22px; }
+    .hero-content { padding: 100px 20px 60px; }
+    .hero-content h1 { font-size: 36px; }
+    .hero-content h2 { font-size: 20px; }
+    .hero-content p { font-size: 16px; }
+    .email-form { flex-direction: column; }
+    .email-form .btn { width: 100%; min-height: 50px; }
+    .feature { text-align: center; padding: 45px 20px; }
+    .feature-copy { padding: 20px 10px; }
+    .feature-copy p { font-size: 18px; }
+    .accordion-button { font-size: 17px; padding: 18px; }
+    .accordion-body { font-size: 16px; }
+    .auth-box { padding: 28px 22px; }
+    .auth-box h1 { font-size: 28px; }
+}
+@media (max-width: 400px) {
+    .brand { font-size: 18px; }
+    .navbar { padding-left: 15px !important; padding-right: 15px !important; }
+    .hero-content h1 { font-size: 30px; }
+}
