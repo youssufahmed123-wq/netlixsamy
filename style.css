@@ -21,7 +21,7 @@ a { text-decoration: none; }
             rgba(0,0,0,.55),
             rgba(0,0,0,.65)
         ),
-        url("./image/elLovers.png") center center / cover no-repeat;
+        url("./elLovers.png") center center / cover no-repeat;
 }
 
 /* Login and Register background */
